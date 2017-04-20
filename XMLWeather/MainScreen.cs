@@ -15,5 +15,10 @@ namespace XMLWeather
         {
             InitializeComponent();
         }
+
+        private void DisplayInfo()
+        {
+
+        }
     }
 }

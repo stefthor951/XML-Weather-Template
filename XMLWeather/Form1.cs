@@ -97,6 +97,8 @@ namespace XMLWeather
                                 d.tempLow = greatGrandChild.Attributes["min"].Value;
                             }
 
+
+
                             if (greatGrandChild.Name == "clouds")
                             {
                                 d.condition = greatGrandChild.Attributes["value"].Value;
