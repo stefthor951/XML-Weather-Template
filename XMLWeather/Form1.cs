@@ -30,11 +30,12 @@ namespace XMLWeather
             {
                 MessageBox.Show("Please connect to a network.");
             }
-            
+
 
             // open weather screen for todays weather
-            CurrentScreen cs = new CurrentScreen();
-            this.Controls.Add(cs);
+            //CurrentScreen cs = new CurrentScreen();
+            MainScreen ms = new MainScreen();
+            this.Controls.Add(ms);
         }
 
         private static void GetData()
@@ -83,12 +84,17 @@ namespace XMLWeather
             parent = doc.DocumentElement;
             foreach (XmlNode child in parent.ChildNodes)
             {
+                if (child.Name == "")
+                {
+
+                }
                 if (child.Name == "forecast")
                 {
                     foreach (XmlNode grandChild in child.ChildNodes)
                     {
                         foreach (XmlNode greatGrandChild in grandChild.ChildNodes)
                         {
+                            
                             d.date = grandChild.Attributes["day"].Value;
 
                             if (greatGrandChild.Name == "temperature")
@@ -99,9 +105,10 @@ namespace XMLWeather
 
 
 
-                            if (greatGrandChild.Name == "clouds")
+                            if (greatGrandChild.Name == "symbol")
                             {
-                                d.condition = greatGrandChild.Attributes["value"].Value;
+                                //d.condition = greatGrandChild.Attributes["value"].Value;
+                                d.tempHigh = greatGrandChild.Attributes["number"].Value;
                                 days.Add(d);
                                 d = new Day();
                             }
