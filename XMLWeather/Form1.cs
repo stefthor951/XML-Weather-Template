@@ -69,6 +69,11 @@ namespace XMLWeather
                     d.tempLow = child.Attributes["min"].Value;
                     d.currentTemp = child.Attributes["value"].Value;
                 }
+
+                if (child.Name == "weather")
+                {
+                    d.condition = child.Attributes["number"].Value;
+                }
             }
             days.Add(d);
         }
@@ -84,16 +89,22 @@ namespace XMLWeather
             parent = doc.DocumentElement;
             foreach (XmlNode child in parent.ChildNodes)
             {
-                if (child.Name == "")
-                {
 
-                }
                 if (child.Name == "forecast")
                 {
+                    int counter = 0;
                     foreach (XmlNode grandChild in child.ChildNodes)
                     {
+                        if (counter == 0)
+                        {
+                            days[0].date = grandChild.Attributes["day"].Value;
+                            counter++;
+                        }
+
                         foreach (XmlNode greatGrandChild in grandChild.ChildNodes)
                         {
+                            
+                            
                             
                             d.date = grandChild.Attributes["day"].Value;
 
@@ -107,8 +118,7 @@ namespace XMLWeather
 
                             if (greatGrandChild.Name == "symbol")
                             {
-                                //d.condition = greatGrandChild.Attributes["value"].Value;
-                                d.tempHigh = greatGrandChild.Attributes["number"].Value;
+                                d.condition = greatGrandChild.Attributes["number"].Value;
                                 days.Add(d);
                                 d = new Day();
                             }

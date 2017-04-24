@@ -30,8 +30,8 @@
         {
             this.dayOutput = new System.Windows.Forms.Label();
             this.currentDateOutput = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.currentCondition = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.currentCondition)).BeginInit();
             this.SuspendLayout();
             // 
             // dayOutput
@@ -56,24 +56,24 @@
             this.currentDateOutput.TabIndex = 1;
             this.currentDateOutput.Text = "dd/mm/yyyy";
             // 
-            // pictureBox1
+            // currentCondition
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(50, 105);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(150, 92);
-            this.pictureBox1.TabIndex = 2;
-            this.pictureBox1.TabStop = false;
+            this.currentCondition.Location = new System.Drawing.Point(50, 105);
+            this.currentCondition.Name = "currentCondition";
+            this.currentCondition.Size = new System.Drawing.Size(150, 92);
+            this.currentCondition.TabIndex = 2;
+            this.currentCondition.TabStop = false;
             // 
             // MainScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.currentCondition);
             this.Controls.Add(this.currentDateOutput);
             this.Controls.Add(this.dayOutput);
             this.Name = "MainScreen";
             this.Size = new System.Drawing.Size(250, 400);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.currentCondition)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -83,6 +83,6 @@
 
         private System.Windows.Forms.Label dayOutput;
         private System.Windows.Forms.Label currentDateOutput;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox currentCondition;
     }
 }
