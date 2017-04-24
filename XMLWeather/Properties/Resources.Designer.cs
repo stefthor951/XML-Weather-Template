@@ -63,6 +63,16 @@ namespace XMLWeather.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap cloudy {
+            get {
+                object obj = ResourceManager.GetObject("cloudy", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap cloudy1 {
             get {
                 object obj = ResourceManager.GetObject("cloudy1", resourceCulture);
@@ -93,6 +103,16 @@ namespace XMLWeather.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap rainsymbol {
+            get {
+                object obj = ResourceManager.GetObject("rainsymbol", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap snow {
             get {
                 object obj = ResourceManager.GetObject("snow", resourceCulture);
@@ -103,9 +123,9 @@ namespace XMLWeather.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap thunderstorm {
+        internal static System.Drawing.Bitmap sunny {
             get {
-                object obj = ResourceManager.GetObject("thunderstorm", resourceCulture);
+                object obj = ResourceManager.GetObject("sunny", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -113,10 +133,9 @@ namespace XMLWeather.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap weather_symbols_clip_art_free_vector_in_open_office_drawing_svg_svg_jM61Z5_clipart {
+        internal static System.Drawing.Bitmap thunderstorm {
             get {
-                object obj = ResourceManager.GetObject("weather_symbols_clip_art_free_vector_in_open_office_drawing_svg_svg_jM61Z5_clipar" +
-                        "t", resourceCulture);
+                object obj = ResourceManager.GetObject("thunderstorm", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

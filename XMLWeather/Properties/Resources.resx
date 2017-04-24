@@ -3481,7 +3481,13 @@
   <data name="thunderstorm" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\thunderstorm.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="weather_symbols_clip_art_free_vector_in_open_office_drawing_svg_svg_jM61Z5_clipart" type="System.Resources.ResXFileRef, System.Windows.Forms">
+  <data name="sunny" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\weather-symbols-clip-art-free-vector-in-open-office-drawing-svg-svg-jM61Z5-clipart.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="cloudy" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\cloudy.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="rainsymbol" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\rainsymbol.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

@@ -123,6 +123,12 @@
   <ItemGroup>
     <None Include="Resources\weather-symbols-clip-art-free-vector-in-open-office-drawing-svg-svg-jM61Z5-clipart.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rainsymbol.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cloudy.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

@@ -30,8 +30,8 @@
         {
             this.dayOutput = new System.Windows.Forms.Label();
             this.currentDateOutput = new System.Windows.Forms.Label();
-            this.currentCondition = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.currentCondition)).BeginInit();
+            this.currentConditionPicture = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.currentConditionPicture)).BeginInit();
             this.SuspendLayout();
             // 
             // dayOutput
@@ -56,24 +56,26 @@
             this.currentDateOutput.TabIndex = 1;
             this.currentDateOutput.Text = "dd/mm/yyyy";
             // 
-            // currentCondition
+            // currentConditionPicture
             // 
-            this.currentCondition.Location = new System.Drawing.Point(50, 105);
-            this.currentCondition.Name = "currentCondition";
-            this.currentCondition.Size = new System.Drawing.Size(150, 92);
-            this.currentCondition.TabIndex = 2;
-            this.currentCondition.TabStop = false;
+            this.currentConditionPicture.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.currentConditionPicture.Location = new System.Drawing.Point(50, 105);
+            this.currentConditionPicture.Name = "currentConditionPicture";
+            this.currentConditionPicture.Size = new System.Drawing.Size(150, 92);
+            this.currentConditionPicture.TabIndex = 2;
+            this.currentConditionPicture.TabStop = false;
             // 
             // MainScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.currentCondition);
+            this.BackColor = System.Drawing.Color.White;
+            this.Controls.Add(this.currentConditionPicture);
             this.Controls.Add(this.currentDateOutput);
             this.Controls.Add(this.dayOutput);
             this.Name = "MainScreen";
             this.Size = new System.Drawing.Size(250, 400);
-            ((System.ComponentModel.ISupportInitialize)(this.currentCondition)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.currentConditionPicture)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -83,6 +85,6 @@
 
         private System.Windows.Forms.Label dayOutput;
         private System.Windows.Forms.Label currentDateOutput;
-        private System.Windows.Forms.PictureBox currentCondition;
+        private System.Windows.Forms.PictureBox currentConditionPicture;
     }
 }
