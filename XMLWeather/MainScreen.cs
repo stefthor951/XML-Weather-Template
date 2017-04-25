@@ -19,32 +19,33 @@ namespace XMLWeather
 
         private void DisplayInfo()
         {
+            dayOutput.Text = DateTime.Now.AddDays(0).DayOfWeek.ToString();
             currentDateOutput.Text = Form1.days[0].date;
+            currentConditionText.Text = Form1.days[0].condition + "   " + Form1.days[0].currentTemp + "°C";
 
-            //Form1.days[0].condition = "800";
-            #region checking the different conditions and setting picture as appropriate.
-            
-            if (Convert.ToInt16(Form1.days[0].condition) > 199 && Convert.ToInt16(Form1.days[0].condition) < 300)
+            #region checking the different conditionIDs and setting picture as appropriate.
+
+            if (Convert.ToInt16(Form1.days[0].conditionID) > 199 && Convert.ToInt16(Form1.days[0].conditionID) < 300)
             {
                 currentConditionPicture.BackgroundImage = Properties.Resources.thunderstorm;
             }
-            else if (Convert.ToInt16(Form1.days[0].condition) > 299 && Convert.ToInt16(Form1.days[0].condition) < 600)
+            else if (Convert.ToInt16(Form1.days[0].conditionID) > 299 && Convert.ToInt16(Form1.days[0].conditionID) < 600)
             {
                 currentConditionPicture.BackgroundImage = Properties.Resources.rainsymbol;
             }
-            else if (Convert.ToInt16(Form1.days[0].condition) > 599 && Convert.ToInt16(Form1.days[0].condition) < 700)
+            else if (Convert.ToInt16(Form1.days[0].conditionID) > 599 && Convert.ToInt16(Form1.days[0].conditionID) < 700)
             {
                 currentConditionPicture.BackgroundImage = Properties.Resources.snow;
             }
-            else if (Convert.ToInt16(Form1.days[0].condition) > 699 && Convert.ToInt16(Form1.days[0].condition) < 800)
+            else if (Convert.ToInt16(Form1.days[0].conditionID) > 699 && Convert.ToInt16(Form1.days[0].conditionID) < 800)
             {
                 currentConditionPicture.BackgroundImage = Properties.Resources.cloudy1;
             }
-            else if (Convert.ToInt16(Form1.days[0].condition) == 800)
+            else if (Convert.ToInt16(Form1.days[0].conditionID) == 800)
             {
                 currentConditionPicture.BackgroundImage = Properties.Resources.sunny;
             }
-            else if (Convert.ToInt16(Form1.days[0].condition) > 800 && Convert.ToInt16(Form1.days[0].condition) < 900)
+            else if (Convert.ToInt16(Form1.days[0].conditionID) > 800 && Convert.ToInt16(Form1.days[0].conditionID) < 900)
             {
                 currentConditionPicture.BackgroundImage = Properties.Resources.cloudy;
             }

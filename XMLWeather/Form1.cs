@@ -67,12 +67,13 @@ namespace XMLWeather
                 {
                     d.tempHigh = child.Attributes["max"].Value;
                     d.tempLow = child.Attributes["min"].Value;
-                    d.currentTemp = child.Attributes["value"].Value;
+                    d.currentTemp = Convert.ToString(Math.Round(Convert.ToDouble(child.Attributes["value"].Value)));
                 }
 
                 if (child.Name == "weather")
                 {
-                    d.condition = child.Attributes["number"].Value;
+                    d.conditionID = child.Attributes["number"].Value;
+                    d.condition = child.Attributes["value"].Value;
                 }
             }
             days.Add(d);
@@ -118,7 +119,8 @@ namespace XMLWeather
 
                             if (greatGrandChild.Name == "symbol")
                             {
-                                d.condition = greatGrandChild.Attributes["number"].Value;
+                                d.condition = greatGrandChild.Attributes["name"].Value;
+                                d.conditionID = greatGrandChild.Attributes["number"].Value;
                                 days.Add(d);
                                 d = new Day();
                             }
