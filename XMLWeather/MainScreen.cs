@@ -21,19 +21,32 @@ namespace XMLWeather
         {
             currentDateOutput.Text = Form1.days[0].date;
 
-            Form1.days[0].condition = "800";
+            //Form1.days[0].condition = "800";
             #region checking the different conditions and setting picture as appropriate.
-            if (Convert.ToInt16(Form1.days[0].condition) == 800)
-            {
-                currentConditionPicture.BackgroundImage = Properties.Resources.sunny;
-            }
-            else if (Convert.ToInt16(Form1.days[0].condition) > 199 && Convert.ToInt16(Form1.days[0].condition) < 300)
+            
+            if (Convert.ToInt16(Form1.days[0].condition) > 199 && Convert.ToInt16(Form1.days[0].condition) < 300)
             {
                 currentConditionPicture.BackgroundImage = Properties.Resources.thunderstorm;
             }
-            else if (Convert.ToInt16(Form1.days[0].condition) > 299 && Convert.ToInt16(Form1.days[0].condition) < 400)
+            else if (Convert.ToInt16(Form1.days[0].condition) > 299 && Convert.ToInt16(Form1.days[0].condition) < 600)
             {
                 currentConditionPicture.BackgroundImage = Properties.Resources.rainsymbol;
+            }
+            else if (Convert.ToInt16(Form1.days[0].condition) > 599 && Convert.ToInt16(Form1.days[0].condition) < 700)
+            {
+                currentConditionPicture.BackgroundImage = Properties.Resources.snow;
+            }
+            else if (Convert.ToInt16(Form1.days[0].condition) > 699 && Convert.ToInt16(Form1.days[0].condition) < 800)
+            {
+                currentConditionPicture.BackgroundImage = Properties.Resources.cloudy1;
+            }
+            else if (Convert.ToInt16(Form1.days[0].condition) == 800)
+            {
+                currentConditionPicture.BackgroundImage = Properties.Resources.sunny;
+            }
+            else if (Convert.ToInt16(Form1.days[0].condition) > 800 && Convert.ToInt16(Form1.days[0].condition) < 900)
+            {
+                currentConditionPicture.BackgroundImage = Properties.Resources.cloudy;
             }
             #endregion
 
