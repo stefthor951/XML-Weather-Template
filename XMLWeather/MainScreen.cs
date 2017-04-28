@@ -20,10 +20,28 @@ namespace XMLWeather
         private void DisplayInfo()
         {
             dayOutput.Text = DateTime.Now.AddDays(0).DayOfWeek.ToString();
-            currentDateOutput.Text = Form1.days[0].date;
-            currentConditionText.Text = Form1.days[0].condition + "   " + Form1.days[0].currentTemp + "°C";
+            dayOutput1.Text = dayOutput.Text = DateTime.Now.AddDays(1).DayOfWeek.ToString();
+            dayOutput2.Text = dayOutput.Text = DateTime.Now.AddDays(2).DayOfWeek.ToString();
+            dayOutput3.Text = dayOutput.Text = DateTime.Now.AddDays(3).DayOfWeek.ToString();
 
-            #region checking the different conditionIDs and setting picture as appropriate.
+            currentDateOutput.Text = Form1.days[0].date;
+            dateOutput1.Text = Form1.days[1].date;
+            dateOutput2.Text = Form1.days[2].date;
+            dateOutput3.Text = Form1.days[3].date;
+
+            tempOutput1.Text = "H: " + Form1.days[1].tempHigh + "°C" + " L: " + Form1.days[1].tempLow + "°C";
+            tempOutput2.Text = "H: " + Form1.days[2].tempHigh + "°C" + " L: " + Form1.days[2].tempLow + "°C";
+            tempOutput3.Text = "H: " + Form1.days[3].tempHigh + "°C" + " L: " + Form1.days[3].tempLow + "°C";
+
+            precipitationOutput1.Text = Form1.days[1].precipitation + "mm ";
+            precipitationOutput2.Text = Form1.days[2].precipitation + "mm ";
+            precipitationOutput3.Text = Form1.days[3].precipitation + "mm ";
+
+            currentConditionText.Text = Form1.days[0].condition + "   " + Form1.days[0].currentTemp + "°C";
+            windOutput.Text = Form1.days[0].windSpeed + "km/h winds " + Form1.days[0].windDirection;
+
+
+            #region checking the different conditionIDs for today and setting picture as appropriate.
 
             if (Convert.ToInt16(Form1.days[0].conditionID) > 199 && Convert.ToInt16(Form1.days[0].conditionID) < 300)
             {
@@ -49,6 +67,9 @@ namespace XMLWeather
             {
                 currentConditionPicture.BackgroundImage = Properties.Resources.cloudy;
             }
+
+            #endregion
+            #region checking conditionIDs for day1
             #endregion
 
             //cityOutput.Text = Form1.days[0].location;
